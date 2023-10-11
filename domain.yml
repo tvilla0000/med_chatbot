@@ -1,5 +1,8 @@
 version: "3.1"
 
+actions:
+  - action_authenticate_apimedic
+
 intents:
   - greet
   - goodbye
@@ -8,6 +11,44 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - create_profile
+  - affirm_profile
+  - deny_profile
+  - provide_name
+  - provide_age
+  - provide_gender
+  - provide_dietary-preference
+  - provide_goal
+  - provide_weight
+  - provide_body_fat
+
+
+entities:
+  - age 
+  - gender
+  - name
+  - dietary_preference
+  - goal
+  - weight
+  - body_fat
+
+slots:
+  name:
+    type: text
+
+  age:
+    type: float
+
+  gender:
+    type: text
+  
+  dietary_preference:
+    type: text
+
+  goal:
+    type: text
+
+
 
 responses:
   utter_greet:
@@ -29,6 +70,29 @@ responses:
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
 
+  utter_hello_profile:
+  - text: "Hey There! I Am Chatbot. Would You Like To Create A Profile?"
+  - text: "New In Town? Would You Like Me To Get You Started On Creating An Awesome New Profile?"
+  - text: "Looks Like You're New Around Here. Let's Get You Started With A New Profile!"
+
+  utter_continue_profile:
+  - text: "Of Course! Let's Get Started!"
+  - text: "Awesome! let's Get Started!"
+  - text: "Absolutely! One Profile Coming Right Up!"
+
+  utter_deny_profile: 
+  - text: "No Problem. What Can I Assist You With Today?"
+  - text: "No Worries! You Can Create A Profile At Any Time By Letting Me Know! \n So... What's On Your Mind?"
+  - text: "Okie Dokie, If You Change Your Mind Just Let Me Know! \n What Can I Help You With Today?"
+  - text: "Okay. In That Case... \n What's On Your Mind?"
+
+  utter_profile_completed:
+  - text: "You're Profile Has Been Successfully Created! \n It Is Very Nice To Meet You {name}!"
+  - text: "Awesome! Your Profile Was Successfully Created. \n I'm Looking Forward To Learning More About You {name}"
+
+
+
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+

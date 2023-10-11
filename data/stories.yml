@@ -28,3 +28,9 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
+
+- story: test API
+  steps:
+  - intent: test_api
+  - action: action_authenticate_apimedic
+  

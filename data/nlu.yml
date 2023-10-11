@@ -15,7 +15,10 @@ nlu:
     - hey dude
     - goodmorning
     - goodevening
+    - goodafternoon
     - good afternoon
+    - What's up
+    - How's it going
 
 - intent: goodbye
   examples: |
@@ -89,3 +92,56 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+    - Who am I speaking with? 
+    
+- intent: test_api
+  examples: |
+    - check the api
+    - api status
+    - test the api
+    - run the api test
+    - i want to run the api test
+    - can you test the api for me
+
+- intent: provide_name
+  examples: |
+    - My name is [john](name)
+    - Call me [Alice](name)
+    - I am [Bob](name)
+    - My friends and family call me [Mike](name)
+    - You can call me [Julie](name)
+    - Hi! I'm [Diego](name)
+    - [Carlos](name)
+
+- intent: provide_age
+  examples: |
+  - I am [24](age) years old
+  - [26](age)
+  - I am [40](age) years young
+  - [20](age) years old
+  - I'm [49](age)
+  - I will be [32](age) next month
+  - [21](age)
+
+- intent: provide_gender
+  example: |
+  - I am a [Man](gender)
+  - I'm a [Girl](gender)
+  - [Woman](gender)
+  - I am a [Boy](gender)
+  - I [Prefer Not To Say](gender)
+  - I identify as a [Woman](gender)
+  - I identify as [non-binary](gender)
+
+- intent: provide_dietary_preference
+  examples: |
+  - I am a [Vegetarian](dietary_preference)
+  - I'm [Vegan](dietary_preference)
+  - I am [Pescatarian](dietary_preference)
+  - I generally try and stick to a [High Protein](dietary_preference) diet
+  - I'm not too strict with my diet right now. I just try my best to eat [healthy](dietary_preference) foods
+  - I really like to eat [Low Carb](dietary_preference) and [High Protein](dietary_preference) foods
+  - I only eat [Plant-Based] foods. 
+  - [Low Carb](dietary_preference)
+  - I stick to foods that are [Halal](dietary_preference)
+  - I typically enjoy foods that are [Paleo](dietary_preference)
